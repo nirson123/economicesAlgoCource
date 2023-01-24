@@ -83,5 +83,5 @@ def calculate_kidney_chance(N_pairs: int, N_tries: int) -> float:
 
 if __name__ == '__main__':
     start_time = time.time()
-    print(f'fraction of sicks that got a kidnry: {calculate_kidney_chance(1000, 500)}')
+    print(f'fraction of sicks that got a kidney: {calculate_kidney_chance(1000, 500)}')
     print(f'time: {time.time() - start_time}')
