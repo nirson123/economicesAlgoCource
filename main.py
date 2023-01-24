@@ -185,6 +185,10 @@ def test_cycle_with_multiplication_less_then_1_dijkstra():
     nx.set_edge_attributes(g2, {(1, 2): 2, (2, 3): 0.5, (3, 4): 2, (4, 1): 0.8}, 'weight')
     assert cycle_with_multiplication_less_then_1_dijkstra(g2, 'weight') is None
 
+    g3 = nx.DiGraph({1: [2], 2: [3], 3: [2]})
+    nx.set_edge_attributes(g3, {(1, 2): 10, (2, 3): 1, (3, 2): 0.8}, 'weight')
+    test_less_then_1(cycle_with_multiplication_less_then_1_dijkstra(g3, 'weight'), g3)
+
 
 def main():
     test_cycle_with_multiplication_less_then_1()
